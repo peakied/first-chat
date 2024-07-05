@@ -38,7 +38,6 @@ public class MessageController {
             @Payload Message chatMessage,
             SimpMessageHeaderAccessor headerAccessor
     ) {
-        System.out.println(chatMessage);
         if (headerAccessor.getSessionAttributes() != null) {
             headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
         }

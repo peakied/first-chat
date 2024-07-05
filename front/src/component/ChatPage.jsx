@@ -58,7 +58,7 @@ function ChatPage({ username }) {
     };
         return (
             <Box sx={{
-                width: '100%',
+                width: '40vw',  // Specific width
                 margin: 'auto',
                 height: '100vh',
                 display: 'flex',
@@ -71,6 +71,7 @@ function ChatPage({ username }) {
                         overflow: 'auto',
                         mb: 2,
                         p: 2,
+                        mt: 2,
                         display: 'flex',
                         flexDirection: 'column-reverse'
                     }}
@@ -81,7 +82,7 @@ function ChatPage({ username }) {
                         ))}
                     </Box>
                 </Paper>
-                <Paper component="form" onSubmit={sendMessage} sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}>
+                <Paper component="form" onSubmit={sendMessage} sx={{ mb:2, p: '2px 4px', display: 'flex', alignItems: 'center' }}>
                     <TextField
                         inputRef={messageInputRef}
                         fullWidth
